@@ -56,8 +56,7 @@ public class SP1Variation4 {
         int oldFans = fans;
         double oldMoney = money;
 
-        double fillPercentage =
-                (double) attendance / venueCapacity * 100;
+        double fillPercentage = (double) attendance / venueCapacity * 100;
 
         System.out.println(bandName + " plays to " + attendance + " people! (" + (int) fillPercentage + "% full)"
         );
