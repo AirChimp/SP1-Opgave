@@ -103,9 +103,7 @@ public class SP1Variation4 {
 
         if (fans < 0) {
             fans = 0;
-        }
-
-        if (fans == 0) {
+        } else if (fans == 0) {
             System.out.println(bandName + " has broken up!");
         }
     }
