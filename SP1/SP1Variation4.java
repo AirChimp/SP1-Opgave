@@ -11,7 +11,6 @@ public class SP1Variation4 {
     private int experiencePoints;
     private double money;
     private char genre;
-
     private String[] repertoire;
 
 
@@ -73,15 +72,9 @@ public class SP1Variation4 {
         // Concert payout
         earnMoney(3000);
 
-        System.out.println(
-                "Fans: " + oldFans + " -> " + fans
-        );
+        System.out.println("Fans: " + oldFans + " -> " + fans);
 
-        System.out.printf(
-                "Money: $%.2f -> $%.2f%n",
-                oldMoney,
-                money
-        );
+        System.out.printf("Money: $%.2f -> $%.2f%n", oldMoney, money);
 
         System.out.println();
     }
@@ -114,9 +107,7 @@ public class SP1Variation4 {
         }
 
         if (fans == 0) {
-            System.out.println(
-                    bandName + " has broken up!"
-            );
+            System.out.println(bandName + " has broken up!");
         }
     }
 
@@ -140,9 +131,9 @@ public class SP1Variation4 {
         if (money >= amount) {
             money -= amount;
             return true;
+        } else {
+            return false;
         }
-
-        return false;
     }
 
 
@@ -157,9 +148,7 @@ public class SP1Variation4 {
         int xpThreshold = 2000 * fameLevel;
 
         if (experiencePoints > xpThreshold) {
-            System.out.println(
-                    bandName + " is ready to level up!"
-            );
+            System.out.println(bandName + " is ready to level up!");
         }
     }
 
@@ -178,10 +167,7 @@ public class SP1Variation4 {
 
             maxFans += 5000;
 
-            System.out.println(
-                    bandName +
-                            " reached Fame Level " +
-                            fameLevel + "!"
+            System.out.println(bandName + " reached Fame Level " + fameLevel + "!"
             );
         }
     }
@@ -192,7 +178,6 @@ public class SP1Variation4 {
     // =========================
 
     public boolean isLosingRelevance() {
-
         return fans < maxFans * 0.25;
     }
 
@@ -202,7 +187,6 @@ public class SP1Variation4 {
     // =========================
 
     public boolean isActive() {
-
         return fans > 0;
     }
 
@@ -212,7 +196,6 @@ public class SP1Variation4 {
     // =========================
 
     public double getFanPercentage() {
-
         return (double) fans / maxFans * 100;
     }
 
@@ -223,10 +206,7 @@ public class SP1Variation4 {
 
     public void printRepertoire() {
 
-        System.out.println(
-                "Repertoire (" +
-                        repertoire.length +
-                        " songs):"
+        System.out.println("Repertoire (" + repertoire.length + " songs):"
         );
 
         for (String song : repertoire) {
@@ -329,7 +309,7 @@ public class SP1Variation4 {
 
         System.out.println("=== SUMMER FESTIVAL ===");
 
-        SP1Variation41.playGig(2000, 1800);
+        SP1Variation41.playGig(2000, 2000);
 
         SP1Variation42.playGig(2000, 1650);
 
